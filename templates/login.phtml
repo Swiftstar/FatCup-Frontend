@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Slim 3</title>
+    <?php include_once 'bootstrap.phtml' ?>
+    <?php include_once 'firebase_ref.phtml' ?>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/fatcup/public">Back</a>
+        <div class="card">
+            <div class="card-header text-center">登入</div>
+            <div class="card-body">
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/firebase.js"></script>
+    <script type="text/javascript" src="assets/js/login.js"></script>
+    <script type="text/javascript">
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                window.location = "/fatcup/public";
+            }
+        });
+    </script>
+</body>
+
+</html>

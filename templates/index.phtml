@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>FatCup Homepage</title>
+    <?php include_once 'bootstrap.phtml' ?>
+    <?php include_once 'firebase_ref.phtml' ?>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="name">Hello!</h1>
+        </hr>
+        <img id="headimg" src="" class="img-thumbnail">
+        <button id="login" type="button" class="btn btn-link"><a href="/df"></a></button>
+        <form id="phoneInput" class="form-group">
+            <label for="usr">手機:</label>
+            <input type="text" class="form-control" id="usr">
+            <button id="phoneBtn" type="button" class="btn btn-primary">提交</button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="assets/js/firebase.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+
+</html>
